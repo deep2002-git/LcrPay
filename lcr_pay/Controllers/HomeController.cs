@@ -11,7 +11,7 @@ namespace lcr_pay.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         public ActionResult Privacy_Policy()
@@ -27,6 +27,16 @@ namespace lcr_pay.Controllers
             return View();
         }
         public ActionResult Contact_Us()
+        {
+            return View();
+        }
+
+        public ActionResult BBPS_Services()
+        {
+            return View();
+        }
+
+        public ActionResult Mobile_Recharge()
         {
             return View();
         }
