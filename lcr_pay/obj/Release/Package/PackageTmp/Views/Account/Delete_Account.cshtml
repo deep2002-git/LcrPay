@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Delete_Account";
+    Layout = "~/Views/Home_LayoutPage1.cshtml";
+}
+
+<section class="banner-one py-5 " style="min-height: 100vh;">
+    <div class="banner-one__shape-bg-1" style="background-image: url('@Url.Content("~/assets/images/shapes/banner-one-shape-bg-1.png")'); background-size: cover; background-position: center;"></div>
+
+    <div class="container my-5">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-6">
+                <div class="card shadow-lg rounded-4 p-4 border-0 animate__animated animate__fadeIn">
+                    <h3 class="text-center mb-4 text-black fw-bold">Delete Your Account</h3>
+
+                    <div class="mb-3">
+                        <input type="tel" class="form-control form-control-lg" id="phoneInput" placeholder="Enter your phone number" />
+                    </div>
+
+                    <div class="d-grid mb-4">
+                        <button class="btn btn-primary btn-lg" id="checkPhoneBtn">Next</button>
+                    </div>
+
+                    <div id="deleteForm" class="d-none">
+                        <div class="mb-3">
+                            <textarea class="form-control form-control-lg" rows="4" id="deleteReason" placeholder="Enter reason for account deletion"></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-danger btn-lg" onclick="submitDelete()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Confirmation Modal -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-violet">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm Deletion</h5>
+                <button type="button" class="close text-black" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your account?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-danger" id="confirmYesBtn">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('#checkPhoneBtn').click(function () {
+                var phone = $('#phoneInput').val().trim();
+                if (phone === '') {
+                    alert('Please enter a phone number.');
+                    return;
+                }
+                $('#confirmDeleteModal').modal('show');
+            });
+
+            $('#confirmYesBtn').click(function () {
+                $('#confirmDeleteModal').modal('hide');
+                $('#deleteForm').removeClass('d-none');
+                $('#checkPhoneBtn').prop('disabled', true);
+                $('#phoneInput').prop('disabled', true);
+            });
+        });
+
+        function submitDelete() {
+            var phone = $('#phoneInput').val().trim();
+            var reason = $('#deleteReason').val().trim();
+            if (reason === '') {
+                alert("Please enter a reason for deletion.");
+                return;
+            }
+
+            // Example submission: log or send AJAX
+            alert("Account deletion submitted for phone: " + phone + "\nReason: " + reason);
+
+            // Optionally send to your controller:
+            /*
+            $.post('/Account/DeleteUser', {
+                phone: phone,
+                reason: reason
+            }, function (response) {
+                alert("Response: " + response.message);
+            });
+            */
+        }
+    </script>
+}

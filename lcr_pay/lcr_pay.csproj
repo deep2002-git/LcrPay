@@ -1,0 +1,302 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F6C634B-7788-45A4-A140-CD0F7695904F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>lcr_pay</RootNamespace>
+    <AssemblyName>lcr_pay</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\animate.min.css" />
+    <Content Include="assets\css\aos.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\custom-animate.css" />
+    <Content Include="assets\css\flaticon.css" />
+    <Content Include="assets\css\font-awesome-all.css" />
+    <Content Include="assets\css\jarallax.css" />
+    <Content Include="assets\css\jquery-ui.css" />
+    <Content Include="assets\css\jquery.magnific-popup.css" />
+    <Content Include="assets\css\module-css\about.css" />
+    <Content Include="assets\css\module-css\banner.css" />
+    <Content Include="assets\css\module-css\before-and-after.css" />
+    <Content Include="assets\css\module-css\blog.css" />
+    <Content Include="assets\css\module-css\brand.css" />
+    <Content Include="assets\css\module-css\contact.css" />
+    <Content Include="assets\css\module-css\counter.css" />
+    <Content Include="assets\css\module-css\faq.css" />
+    <Content Include="assets\css\module-css\footer.css" />
+    <Content Include="assets\css\module-css\google-map.css" />
+    <Content Include="assets\css\module-css\newsletter.css" />
+    <Content Include="assets\css\module-css\office-location.css" />
+    <Content Include="assets\css\module-css\pricing.css" />
+    <Content Include="assets\css\module-css\process.css" />
+    <Content Include="assets\css\module-css\project.css" />
+    <Content Include="assets\css\module-css\services.css" />
+    <Content Include="assets\css\module-css\slider.css" />
+    <Content Include="assets\css\module-css\sliding-text.css" />
+    <Content Include="assets\css\module-css\team.css" />
+    <Content Include="assets\css\module-css\testimonial.css" />
+    <Content Include="assets\css\module-css\why-choose.css" />
+    <Content Include="assets\css\nice-select.css" />
+    <Content Include="assets\css\odometer.min.css" />
+    <Content Include="assets\css\owl.carousel.min.css" />
+    <Content Include="assets\css\owl.theme.default.min.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\swiper.min.css" />
+    <Content Include="assets\css\twentytwenty.css" />
+    <Content Include="assets\fonts\icomoon_orkqwr.svg" />
+    <Content Include="assets\images\brand\brand-1-1.png" />
+    <Content Include="assets\images\brand\brand-1-10.png" />
+    <Content Include="assets\images\brand\brand-1-2.png" />
+    <Content Include="assets\images\brand\brand-1-3.png" />
+    <Content Include="assets\images\brand\brand-1-4.png" />
+    <Content Include="assets\images\brand\brand-1-5.png" />
+    <Content Include="assets\images\brand\brand-1-6.png" />
+    <Content Include="assets\images\brand\brand-1-7.png" />
+    <Content Include="assets\images\brand\brand-1-8.png" />
+    <Content Include="assets\images\brand\brand-1-9.png" />
+    <Content Include="assets\images\extra\app-store.png" />
+    <Content Include="assets\images\extra\appstore.png" />
+    <Content Include="assets\images\extra\play-store.png" />
+    <Content Include="assets\images\extra\playstore.png" />
+    <Content Include="assets\images\extra\round_logo.png" />
+    <Content Include="assets\images\favicons\favicon.ico" />
+    <Content Include="assets\images\lcr_image\1.1.png" />
+    <Content Include="assets\images\lcr_image\1.png" />
+    <Content Include="assets\images\lcr_image\2.1.png" />
+    <Content Include="assets\images\lcr_image\2.png" />
+    <Content Include="assets\images\lcr_image\3.png" />
+    <Content Include="assets\images\lcr_image\font_img.png" />
+    <Content Include="assets\images\lcr_image\Infibeam-Avenues-receives.png" />
+    <Content Include="assets\images\lcr_image\sqaure.png" />
+    <Content Include="assets\images\rec_logos\airtel.png" />
+    <Content Include="assets\images\rec_logos\amazonprime.png" />
+    <Content Include="assets\images\rec_logos\d2h.png" />
+    <Content Include="assets\images\rec_logos\gpay.png" />
+    <Content Include="assets\images\rec_logos\jio.png" />
+    <Content Include="assets\images\rec_logos\phonepe.png" />
+    <Content Include="assets\images\rec_logos\vi.png" />
+    <Content Include="assets\images\rec_logos\zee5.jpeg" />
+    <Content Include="assets\images\resources\LCRPAY_LOGO-qjZI7a_N.png" />
+    <Content Include="assets\images\resources\logo-2.png" />
+    <Content Include="assets\images\shapes\banner-one-shape-bg-1.png" />
+    <Content Include="assets\images\shapes\services-one-shape-3.png" />
+    <Content Include="assets\images\shapes\services-one-shape-4.png" />
+    <Content Include="assets\images\shapes\services-one-shape-bg.png" />
+    <Content Include="assets\images\shapes\site-footer-two-shape-1.png" />
+    <Content Include="assets\images\shapes\sliding-text-shape-1.png" />
+    <Content Include="assets\images\shapes\why-choose-one-shape-1.png" />
+    <Content Include="assets\images\shapes\why-choose-one-shape-2.png" />
+    <Content Include="assets\images\shapes\why-choose-one-shape-bg-shape.png" />
+    <Content Include="assets\js\aos.js" />
+    <Content Include="assets\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\js\countdown.min.js" />
+    <Content Include="assets\js\gsap\gsap.js" />
+    <Content Include="assets\js\gsap\ScrollTrigger.js" />
+    <Content Include="assets\js\gsap\SplitText.js" />
+    <Content Include="assets\js\isotope.js" />
+    <Content Include="assets\js\jarallax.min.js" />
+    <Content Include="assets\js\jquery-latest.js" />
+    <Content Include="assets\js\jquery-sidebar-content.js" />
+    <Content Include="assets\js\jquery-ui.js" />
+    <Content Include="assets\js\jquery.ajaxchimp.min.js" />
+    <Content Include="assets\js\jquery.appear.min.js" />
+    <Content Include="assets\js\jquery.circleType.js" />
+    <Content Include="assets\js\jquery.event.move.js" />
+    <Content Include="assets\js\jquery.fittext.js" />
+    <Content Include="assets\js\jquery.lettering.min.js" />
+    <Content Include="assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="assets\js\jquery.nice-select.min.js" />
+    <Content Include="assets\js\jquery.validate.min.js" />
+    <Content Include="assets\js\marquee.min.js" />
+    <Content Include="assets\js\odometer.min.js" />
+    <Content Include="assets\js\owl.carousel.min.js" />
+    <Content Include="assets\js\script.js" />
+    <Content Include="assets\js\swiper.min.js" />
+    <Content Include="assets\js\twentytwenty.js" />
+    <Content Include="assets\js\typed-2.0.11.js" />
+    <Content Include="assets\js\wNumb.min.js" />
+    <Content Include="assets\js\wow.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="assets\fonts\fa-brands-400.eot" />
+    <Content Include="assets\fonts\fa-brands-400.ttf" />
+    <Content Include="assets\fonts\fa-brands-400.woff" />
+    <Content Include="assets\fonts\fa-brands-400.woff2" />
+    <Content Include="assets\fonts\fa-light-300.woff" />
+    <Content Include="assets\fonts\fa-light-300.woff2" />
+    <Content Include="assets\fonts\fa-regular-400.eot" />
+    <Content Include="assets\fonts\fa-regular-400.woff" />
+    <Content Include="assets\fonts\fa-regular-400.woff2" />
+    <Content Include="assets\fonts\fa-solid-900.woff" />
+    <Content Include="assets\fonts\fa-solid-900.woff2" />
+    <Content Include="assets\fonts\icomoon_orkqwr.eot" />
+    <Content Include="assets\fonts\icomoon_orkqwr.ttf" />
+    <Content Include="assets\fonts\icomoon_orkqwr.woff" />
+    <None Include="packages.config" />
+    <Content Include="Views\Home_LayoutPage1.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Privacy_Policy.cshtml" />
+    <Content Include="Views\Home\Term_condition.cshtml" />
+    <Content Include="Views\Home\Return_Policy.cshtml" />
+    <Content Include="Views\Account\Delete_Account.cshtml" />
+    <Content Include="Views\Home\Contact_Us.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="all_assets\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49810</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49810/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
