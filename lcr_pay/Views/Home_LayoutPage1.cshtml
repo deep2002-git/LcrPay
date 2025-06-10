@@ -30,6 +30,12 @@
     <link rel="stylesheet" href="@Url.Content("~/assets/css/aos.css")" />
     <link rel="stylesheet" href="@Url.Content("~/assets/css/twentytwenty.css")" />
 
+    @*bbps_services*@
+
+    <link rel="stylesheet" href="@Url.Content("~/assets/bbps_serves/banner.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/assets/bbps_serves/flaticon.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/assets/bbps_serves/style.css")" />
+
     <!-- Module CSS -->
     <link rel="stylesheet" href="@Url.Content("~/assets/css/module-css/banner.css")" />
     <link rel="stylesheet" href="@Url.Content("~/assets/css/module-css/slider.css")" />
@@ -150,9 +156,9 @@
                                             <li><a href="#">Rent Payment</a></li>
                                             <li><a href="#">Vendor's Payemnt</a></li>
                                             <li><a href="#">Credit Card Payout</a></li>
-                                            <li><a href="#">Credit Card Bill Payment</a></li>
-                                            <li><a href="#">Mobile Recharge</a></li>
-                                            <li><a href="#">BBPS - All Bill Payments</a></li>
+                                            <li><a href="@Url.Action("DTH_Recharge" , "Home")">DTH Recharge</a></li>
+                                            <li><a href="@Url.Action("Mobile_Recharge" , "Home")">Mobile Recharge</a></li>
+                                            <li><a href="@Url.Action("BBPS_Services" , "Home")">BBPS Services</a></li>
                                             <li><a href="#">LCR Money</a></li>
                                             <li><a href="#">Brand Voucher</a></li>
                                             <li><a href="#">Digital Gold</a></li>
@@ -300,6 +306,12 @@
                                                 <div class="footer-widget-two__essential-links">
                                                     <h4 class="footer-widget-two__title">Our Company</h4>
                                                     <ul class="footer-widget-two__quick-links-list list-unstyled">
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <span class="icon-next"></span>
+                                                               Admin Login
+                                                            </a>
+                                                        </li>
                                                         <li>
                                                             <a href="javascript:void(0)">
                                                                 <span class="icon-next"></span>

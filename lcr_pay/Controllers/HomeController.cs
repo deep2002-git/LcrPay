@@ -9,6 +9,11 @@ namespace lcr_pay.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+
+        public ActionResult Login()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             return View("Index");
@@ -37,6 +42,11 @@ namespace lcr_pay.Controllers
         }
 
         public ActionResult Mobile_Recharge()
+        {
+            return View();
+        }
+
+        public ActionResult DTH_Recharge()
         {
             return View();
         }

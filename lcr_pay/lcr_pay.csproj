@@ -101,6 +101,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\bbps_serves\banner.css" />
+    <Content Include="assets\bbps_serves\flaticon.css" />
+    <Content Include="assets\bbps_serves\style.css" />
     <Content Include="assets\css\animate.min.css" />
     <Content Include="assets\css\aos.css" />
     <Content Include="assets\css\bootstrap.min.css" />
@@ -150,12 +153,36 @@
     <Content Include="assets\images\brand\brand-1-7.png" />
     <Content Include="assets\images\brand\brand-1-8.png" />
     <Content Include="assets\images\brand\brand-1-9.png" />
+    <Content Include="assets\images\dth_recharge\airtelDigitalTv.png" />
+    <Content Include="assets\images\dth_recharge\d2h_logo.png" />
+    <Content Include="assets\images\dth_recharge\dishtv_logo.jpg" />
+    <Content Include="assets\images\dth_recharge\tata_sky_logo.png" />
     <Content Include="assets\images\extra\app-store.png" />
     <Content Include="assets\images\extra\appstore.png" />
     <Content Include="assets\images\extra\play-store.png" />
     <Content Include="assets\images\extra\playstore.png" />
     <Content Include="assets\images\extra\round_logo.png" />
     <Content Include="assets\images\favicons\favicon.ico" />
+    <Content Include="assets\images\images_bbps\airtel.png" />
+    <Content Include="assets\images\images_bbps\amazonprime.png" />
+    <Content Include="assets\images\images_bbps\appstore.png" />
+    <Content Include="assets\images\images_bbps\d2h.png" />
+    <Content Include="assets\images\images_bbps\fastest_services.png" />
+    <Content Include="assets\images\images_bbps\favicon.ico" />
+    <Content Include="assets\images\images_bbps\icomoon.svg" />
+    <Content Include="assets\images\images_bbps\jio.png" />
+    <Content Include="assets\images\images_bbps\phonepe.png" />
+    <Content Include="assets\images\images_bbps\services.png" />
+    <Content Include="assets\images\images_bbps\site-footer-two-shape-1.png" />
+    <Content Include="assets\images\images_bbps\sliding-text-shape-1.png" />
+    <Content Include="assets\images\images_bbps\vi.png" />
+    <Content Include="assets\images\images_bbps\why-choose-one-shape-1.png" />
+    <Content Include="assets\images\images_bbps\why-choose-one-shape-2.png" />
+    <Content Include="assets\images\images_bbps\why-choose-one-shape-bg-shape.png" />
+    <Content Include="assets\images\images_bbps\why-choose-three-shape-1.png" />
+    <Content Include="assets\images\images_bbps\why-choose-three-shape-2.png" />
+    <Content Include="assets\images\images_bbps\why-choose-three-shape-bg-1.png" />
+    <Content Include="assets\images\images_bbps\zee5.jpeg" />
     <Content Include="assets\images\lcr_image\1.1.png" />
     <Content Include="assets\images\lcr_image\1.png" />
     <Content Include="assets\images\lcr_image\2.1.png" />
@@ -249,6 +276,10 @@
     <Content Include="Views\Home\Return_Policy.cshtml" />
     <Content Include="Views\Account\Delete_Account.cshtml" />
     <Content Include="Views\Home\Contact_Us.cshtml" />
+    <Content Include="Views\Home\BBPS_Services.cshtml" />
+    <Content Include="Views\Home\Mobile_Recharge.cshtml" />
+    <Content Include="Views\Home\DTH_Recharge.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -257,7 +288,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="all_assets\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

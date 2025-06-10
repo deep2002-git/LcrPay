@@ -1,0 +1,17 @@
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.dtbcache.json
+
+# Build artifacts
+bin/
+obj/
+*.dll
+*.pdb
+
+# Zipped files
+*.zip
+
+# Other ignored files
+newtonsoft.json (1).zip

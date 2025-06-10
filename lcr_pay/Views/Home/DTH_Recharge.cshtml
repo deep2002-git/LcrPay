@@ -1,8 +1,9 @@
 ﻿
 @{
-    ViewBag.Title = "Mobile_Recharge";
+    ViewBag.Title = "DTH_Recharge";
     Layout = "~/Views/Home_LayoutPage1.cshtml";
 }
+
 
 <!--Why Choose One Start-->
 <section class="why-choose-one">
@@ -11,7 +12,7 @@
         <img src="@Url.Content("~/assets/images/images_bbps/why-choose-one-shape-2.png")" alt="Why Choose Image">
     </div>
     <div class="why-choose-one__big-title">
-        <h3>100% SECURE RECHARGE </h3>
+        <h3>100% SECURE DTH RECHARGE</h3>
     </div>
     <div class="container">
         <div class="row">
@@ -23,74 +24,50 @@
                                 <div class="section-title__tagline-shape"></div>
                                 <div class="section-title__tagline-shape-2"></div>
                             </div>
-                            <span class="section-title__tagline">Become a Mobile Recharge Partner</span>
+                            <span class="section-title__tagline">Become a DTH Recharge Partner</span>
                         </div>
                         <h2 class="section-title__title title-animation">
-                            Looking for Mobile Recharge Services? <span>Your One-Stop Recharge Solution is Here.</span>
+                            Looking for DTH Recharge Services? <span>Your One-Stop Recharge Solution is Here.</span>
                         </h2>
                     </div>
-                    <!-- Consolidated Form in Single Div -->
+                    <!-- DTH Recharge Form in Single Column -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12">
                             <div class="why-choose-one__form-box wow fadeInUp" data-wow-delay="100ms">
-                                <form id="rechargeForm" action="@Url.Action("ProcessRecharge", "Home")" method="post" class="recharge-form">
+                                <form id="dthRechargeForm" action="@Url.Action("ProcessDTHRecharge", "Home")" method="post" class="recharge-form">
                                     @Html.AntiForgeryToken()
-                                    <div class="column">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="operator">Operator</label>
-                                                <select id="operator" name="operator" class="form-control" required style="height: 38px; font-size: 14px; padding: 5px 10px; line-height: 1.5;">
-                                                    <option value="">Select Operator</option>
-                                                    <option value="Airtel">Airtel</option>
-                                                    <option value="Jio">Jio</option>
-                                                    <option value="Vi">Vi</option>
-                                                    <option value="BSNL">BSNL</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="circle">Circle (State)</label>
-                                                <select id="circle" name="circle" class="form-control" required style="height: 38px; font-size: 14px; padding: 5px 10px; line-height: 1.5;">
-                                                    <option value="">Select Circle</option>
-                                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                                    <option value="Delhi">Delhi</option>
-                                                    <option value="Gujarat">Gujarat</option>
-                                                    <option value="Karnataka">Karnataka</option>
-                                                    <option value="Maharashtra">Maharashtra</option>
-                                                    <option value="Tamil Nadu">Tamil Nadu</option>
-                                                    <!-- Add more circles as needed -->
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="mobileNumber">Mobile Number</label>
-                                                <input type="tel" id="mobileNumber" name="mobileNumber" class="form-control" pattern="[0-9]{10}" placeholder="Enter 10-digit mobile number" required style="height: 38px; font-size: 14px; padding: 5px 10px;">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="amount">Amount</label>
-                                                <input type="number" id="amount" name="amount" class="form-control" min="10" max="5000" placeholder="Enter amount (₹10 - ₹5000)" required style="height: 38px; font-size: 14px; padding: 5px 10px;">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="rechargeType">Recharge Type</label>
-                                                <select id="rechargeType" name="rechargeType" class="form-control" required style="height: 38px; font-size: 14px; padding: 5px 10px; line-height: 1.5;">
-                                                    <option value="">Select Recharge Type</option>
-                                                    <option value="Prepaid">Prepaid</option>
-                                                    <option value="Postpaid">Postpaid</option>
-                                                    <option value="Data Plan">Data Plan</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <button type="submit" class="thm-btn recharge-form__btn">Recharge Now</button>
-                                            </div>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="dthOperator">DTH Operator</label>
+                                        <select id="dthOperator" name="dthOperator" class="form-control" required style="height: 38px; font-size: 14px; padding: 5px 10px; line-height: 1.5;">
+                                            <option value="">Select DTH Operator</option>
+                                            <option value="DishTV">Dish TV</option>
+                                            <option value="TataSky">Tata Sky</option>
+                                            <option value="AirtelDigitalTV">Airtel Digital TV</option>
+                                            <option value="SunDirect">Sun Direct</option>
+                                            <option value="VideoconD2H">Videocon D2H</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="customerId">Customer ID</label>
+                                        <input type="text" id="customerId" name="customerId" class="form-control" pattern="[0-9]{8,12}" placeholder="Enter 8-12 digit Customer ID" required style="height: 38px; font-size: 14px; padding: 5px 10px;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="amount">Amount</label>
+                                        <input type="number" id="amount" name="amount" class="form-control" min="100" max="5000" placeholder="Enter amount (₹100 - ₹5000)" required style="height: 38px; font-size: 14px; padding: 5px 10px;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="planType">Plan Type</label>
+                                        <select id="planType" name="planType" class="form-control" required style="height: 38px; font-size: 14px; padding: 5px 10px; line-height: 1.5;">
+                                            <option value="">Select Plan Type</option>
+                                            <option value="Monthly">Monthly</option>
+                                            <option value="Quarterly">Quarterly</option>
+                                            <option value="HalfYearly">Half-Yearly</option>
+                                            <option value="Yearly">Yearly</option>
+                                            <option value="AddOn">Add-On Pack</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="thm-btn recharge-form__btn">Recharge Now</button>
                                     </div>
                                 </form>
                             </div>
@@ -103,28 +80,28 @@
                     <div class="why-choose-one__client-box">
                         <div class="why-choose-one__client-content">
                             <div class="why-choose-one__client-inner">
-                                <h3 class="why-choose-one__client-title">Mobile Recharge<span></span></h3>
+                                <h3 class="why-choose-one__client-title">DTH Recharge<span></span></h3>
                                 <ul class="why-choose-one__client-img-list list-unstyled">
                                     <li>
                                         <div class="banner-one__satisfied-partner-img">
-                                            <img src="~/assets/images/images_bbps/airtel.png" alt="">
+                                            <img src="~/assets/images/images_bbps/d2h.png" alt="Dish TV">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="banner-one__satisfied-partner-img">
-                                            <img src="~/assets/images/images_bbps/jio.png" alt="">
+                                            <img src="~/assets/images/dth_recharge/tata_sky_logo.png" alt="Tata Sky">
                                         </div>
                                     </li>
                                     <li>
                                         <div class="banner-one__satisfied-partner-img">
-                                            <img src="~/assets/images/images_bbps/vi.png" alt="">
+                                            <img src="~/assets/images/dth_recharge/airtelDigitalTv.png" alt="Airtel Digital TV">
                                         </div>
                                     </li>
                                     @*<li>
-                                            <div class="banner-one__satisfied-partner-img">
-                                                <img src="~/assets/images/images_bbps/phonepe.png" alt="">
-                                            </div>
-                                        </li>*@
+                                        <div class="banner-one__satisfied-partner-img">
+                                            <img src="~/assets/images/dth_recharge/d2h_logo.png" alt="Airtel Digital TV">
+                                        </div>
+                                    </li>*@
                                 </ul>
                             </div>
                             <div class="why-choose-one__ratting-and-text">
@@ -149,7 +126,6 @@
                     </div>
                     <div class="why-choose-one__right-bottom">
                         <ul class="row list-unstyled">
-                            <!--Why Choose One Single Start-->
                             <li class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="why-choose-one__single">
                                     <div class="why-choose-one__icon">
@@ -160,12 +136,10 @@
                                         <a href="javascript:void(0)">Instant Onboarding</a>
                                     </h3>
                                     <p class="why-choose-one__text">
-                                        Launch your mobile recharge services swiftly with LCRPAY’s streamlined onboarding process. Start offering recharges in no time.
+                                        Launch your DTH recharge services swiftly with LCRPAY’s streamlined onboarding process. Start offering recharges in no time.
                                     </p>
                                 </div>
                             </li>
-                            <!--Why Choose One Single End-->
-                            <!--Why Choose One Single Start-->
                             <li class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                 <div class="why-choose-one__single">
                                     <div class="why-choose-one__icon">
@@ -176,12 +150,10 @@
                                         <a href="javascript:void(0)">Seamless Integration</a>
                                     </h3>
                                     <p class="why-choose-one__text">
-                                        Integrate mobile recharge services effortlessly with LCRPAY’s developer-friendly platform, compatible with web and mobile apps.
+                                        Integrate DTH recharge services effortlessly with LCRPAY’s developer-friendly platform, compatible with web and mobile apps.
                                     </p>
                                 </div>
                             </li>
-                            <!--Why Choose One Single End-->
-                            <!--Why Choose One Single Start-->
                             <li class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                                 <div class="why-choose-one__single">
                                     <div class="why-choose-one__icon">
@@ -191,11 +163,11 @@
                                     <h3 class="why-choose-one__title">
                                         <a href="javascript:void(0)">High Transaction Success</a>
                                     </h3>
-                                    <p class="why-choose-one__text">Provide a smooth recharge experience with LCRPAY’s services, optimized for high success rates and reliable transactions.</p>
+                                    <p class="why-choose-one__text">
+                                        Provide a smooth DTH recharge experience with LCRPAY’s services, optimized for high success rates and reliable transactions.
+                                    </p>
                                 </div>
                             </li>
-                            <!--Why Choose One Single End-->
-                            <!--Why Choose One Single Start-->
                             <li class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                                 <div class="why-choose-one__single">
                                     <div class="why-choose-one__icon">
@@ -205,10 +177,11 @@
                                     <h3 class="why-choose-one__title">
                                         <a href="javascript:void(0)">Round-the-Clock Support</a>
                                     </h3>
-                                    <p class="why-choose-one__text">Access LCRPAY’s 24/7 technical and customer support via email, phone, or WhatsApp for uninterrupted recharge operations.</p>
+                                    <p class="why-choose-one__text">
+                                        Access LCRPAY’s 24/7 technical and customer support via email, phone, or WhatsApp for uninterrupted DTH recharge operations.
+                                    </p>
                                 </div>
                             </li>
-                            <!--Why Choose One Single End-->
                         </ul>
                         <div class="why-choose-one__contact-box">
                             <div class="why-choose-one__contact-icon">
@@ -242,15 +215,14 @@
                     <div class="section-title__tagline-shape"></div>
                     <div class="section-title__tagline-shape-2"></div>
                 </div>
-                <span class="section-title__tagline">Mobile Recharge Benefits</span>
+                <span class="section-title__tagline">DTH Recharge Benefits</span>
             </div>
             <h2 class="section-title__title title-animation">
-                <br><span>Key Advantages of Mobile Recharge Integration</span>
+                <br><span>Key Advantages of DTH Recharge Integration</span>
             </h2>
         </div>
         <div class="why-choose-three__inner">
             <ul class="row list-unstyled">
-                <!--Why Choose Three Single Start-->
                 <li class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
                     <div class="why-choose-three__single">
                         <div class="why-choose-three__icon">
@@ -260,11 +232,9 @@
                         <h3 class="why-choose-three__title">
                             <a href="#">Instant Recharge Processing</a>
                         </h3>
-                        <p class="why-choose-three__text">LCRPAY’s mobile recharge services enable real-time processing for prepaid and postpaid plans, ensuring instant activation for users.</p>
+                        <p class="why-choose-three__text">LCRPAY’s DTH recharge services enable real-time processing for all plans, ensuring instant channel activation for users.</p>
                     </div>
                 </li>
-                <!--Why Choose Three Single End-->
-                <!--Why Choose Three Single Start-->
                 <li class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                     <div class="why-choose-three__single">
                         <div class="why-choose-three__icon">
@@ -274,11 +244,9 @@
                         <h3 class="why-choose-three__title">
                             <a href="#">Multiple Operator Support</a>
                         </h3>
-                        <p class="why-choose-three__text">Support a wide range of mobile operators for prepaid, postpaid, and data plans, offering flexibility and convenience to your customers.</p>
+                        <p class="why-choose-three__text">Support a wide range of DTH operators for various plans, offering flexibility and convenience to your customers.</p>
                     </div>
                 </li>
-                <!--Why Choose Three Single End-->
-                <!--Why Choose Three Single Start-->
                 <li class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
                     <div class="why-choose-three__single">
                         <div class="why-choose-three__icon">
@@ -286,15 +254,13 @@
                             <div class="why-choose-three__count"></div>
                         </div>
                         <h3 class="why-choose-three__title">
-                            <a href="javascript:void">Revenue Opportunities</a>
+                            <a href="#">Revenue Opportunities</a>
                         </h3>
-                        <p class="text">Boost your business revenue by offering mobile recharge services through LCRPAY, tapping into the high-demand recharge market.</p>
+                        <p class="why-choose-three__text">Boost your business revenue by offering DTH recharge services through LCRPAY, tapping into the growing DTH market.</p>
                     </div>
                 </li>
-                <!--Why Choose Three Single End-->
-                <!--Why Choose Three Single Start-->
-                <li class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="400ms" data-wow-duration="300ms">
-                    <div class="why-choose-single__three__">
+                <li class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
+                    <div class="why-choose-three__single">
                         <div class="why-choose-three__icon">
                             <span class="icon-time"></span>
                             <div class="why-choose-three__count"></div>
@@ -302,10 +268,9 @@
                         <h3 class="why-choose-three__title">
                             <a href="#">User-Friendly Interface</a>
                         </h3>
-                        <p class="why-choose-three__text">Provide a simple and intuitive interface with LCRPAY’s services, enhancing customer satisfaction and retention.</p>
+                        <p class="why-choose-three__text">Provide a simple and intuitive recharge experience with LCRPAY’s services, enhancing customer satisfaction and retention.</p>
                     </div>
                 </li>
-                <!--Why Choose Three Single End-->
             </ul>
         </div>
     </div>
@@ -316,27 +281,27 @@
     <div class="sliding-text-one__wrap">
         <ul class="sliding-text__list list-unstyled marquee_mode">
             <li>
-                <h2 data-hover="Prepaid Recharge" class="sliding-text__title">
-                    Prepaid Recharge
-                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Prepaid Recharge">
+                <h2 data-hover="Monthly Plans" class="sliding-text__title">
+                    Monthly Plans
+                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Monthly Plans">
                 </h2>
             </li>
             <li>
-                <h2 data-hover="Postpaid Bill" class="sliding-text__title">
-                    Postpaid Bill
-                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Postpaid Bill">
+                <h2 data-hover="Quarterly Plans" class="sliding-text__title">
+                    Quarterly Plans
+                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Quarterly Plans">
                 </h2>
             </li>
             <li>
-                <h2 data-hover="Data Plans" class="sliding-text__title">
-                    Data Plans
-                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Data Plans">
+                <h2 data-hover="Yearly Plans" class="sliding-text__title">
+                    Yearly Plans
+                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Yearly Plans">
                 </h2>
             </li>
             <li>
-                <h2 data-hover="International Roaming" class="sliding-text__title">
-                    International Roaming
-                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="International Roaming">
+                <h2 data-hover="Add-On Packs" class="sliding-text__title">
+                    Add-On Packs
+                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Add-On Packs">
                 </h2>
             </li>
         </ul>
@@ -345,27 +310,28 @@
 <!-- Sliding Text Two End -->
 
 <div class="container mb-4">
-    <h5>Mobile Recharge Services</h5>
-    <p>Empower your platform with LCRPAY’s seamless mobile recharge services, enabling instant prepaid, postpaid, and data plan recharges.</p>
-    <p>LCRPAY is a leading provider of scalable mobile recharge solutions in India. Launch your recharge business and maximize revenue with our robust platform.</p>
+    <h5>DTH Recharge Services</h5>
+    <p>Empower your platform with LCRPAY’s seamless DTH recharge services, enabling instant recharges for monthly, quarterly, yearly, and add-on plans.</p>
+    <p>LCRPAY is a leading provider of scalable DTH recharge solutions in India. Launch your recharge business and maximize revenue with our robust platform.</p>
 
-    <h5>Benefits of LCRPAY’s Mobile Recharge Services</h5>
+    <h5>Benefits of LCRPAY’s DTH Recharge Services</h5>
     <ul>
         <li>Quick and easy integration for developers.</li>
         <li>Secure and reliable platform for seamless transactions.</li>
-        <li>Capitalize on the growing mobile recharge market for high returns.</li>
+        <li>Capitalize on the growing DTH recharge market for high returns.</li>
     </ul>
 
     <h5>Supported Recharge Categories</h5>
     <ul>
-        <li>Prepaid Recharge</li>
-        <li>Postpaid Bill</li>
-        <li>Data Plans</li>
-        <li>International Roaming</li>
+        <li>Monthly Plans</li>
+        <li>Quarterly Plans</li>
+        <li>Half-Yearly Plans</li>
+        <li>Yearly Plans</li>
+        <li>Add-On Packs</li>
     </ul>
 
-    <p>LCRPAY’s mobile recharge services offer an excellent opportunity for website owners, SMEs, and organizations to generate additional revenue. Providing recharge services can drive customer engagement and attract more users to your platform.</p>
-    <p>Our platform enables instant processing of mobile recharges, supporting multiple operators with denominations ranging from ₹10 to ₹5000, processed directly from your wallet.</p>
+    <p>LCRPAY’s DTH recharge services offer an excellent opportunity for website owners, SMEs, and organizations to generate additional revenue. Providing recharge services can drive customer engagement and attract more users to your platform.</p>
+    <p>Our platform enables instant processing of DTH recharges, supporting multiple operators with denominations ranging from ₹100 to ₹5000, processed directly from your wallet.</p>
     <p>Track your transactions effortlessly with real-time access to your wallet balance, commission earned, recharge history, and transaction status through our intuitive interface.</p>
 </div>
 
@@ -374,27 +340,27 @@
     <div class="sliding-text-one__wrap">
         <ul class="sliding-text__list list-unstyled marquee_mode">
             <li>
-                <h2 data-hover="Prepaid Recharge" class="sliding-text__title">
-                    Prepaid Recharge
-                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Prepaid Recharge">
+                <h2 data-hover="Monthly Plans" class="sliding-text__title">
+                    Monthly Plans
+                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Monthly Plans">
                 </h2>
             </li>
             <li>
-                <h2 data-hover="Postpaid Bill" class="sliding-text__title">
-                    Postpaid Bill
-                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Postpaid Bill">
+                <h2 data-hover="Quarterly Plans" class="sliding-text__title">
+                    Quarterly Plans
+                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Quarterly Plans">
                 </h2>
             </li>
             <li>
-                <h2 data-hover="Data Plans" class="sliding-text__title">
-                    Data Plans
-                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Data Plans">
+                <h2 data-hover="Yearly Plans" class="sliding-text__title">
+                    Yearly Plans
+                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Yearly Plans">
                 </h2>
             </li>
             <li>
-                <h2 data-hover="International Roaming" class="sliding-text__title">
-                    International Roaming
-                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="International Roaming">
+                <h2 data-hover="Add-On Packs" class="sliding-text__title">
+                    Add-On Packs
+                    <img src="~/assets/images/images_bbps/sliding-text-shape-1.png" alt="Add-On Packs">
                 </h2>
             </li>
         </ul>
@@ -439,8 +405,7 @@
         }
 
     .recharge-form__btn {
-        background: #6a0dad; /* Violet */
-        
+        background: #6d28d9; /* Violet */
         color: #fff;
         padding: 10px 20px;
         border: none;
@@ -454,3 +419,4 @@
             background: #5b21b6; /* Darker violet on hover */
         }
 </style>
+

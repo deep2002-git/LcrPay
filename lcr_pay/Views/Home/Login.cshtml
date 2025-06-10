@@ -1,0 +1,327 @@
+﻿
+@{
+    Layout = "~/Views/Home_LayoutPage1.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Gradient Background with #6a0dad */
+        .banner-one {
+            position: relative;
+            /* background: linear-gradient(135deg, #6a0dad, #a855f7); */
+        }
+
+        /* Background Image */
+        .banner-one__shape-bg-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* Ensure form content is above background image */
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Particle Effect */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+        .particle:nth-child(1) { width: 20px; height: 20px; top: 20%; left: 10%; animation-duration: 20s; }
+        .particle:nth-child(2) { width: 15px; height: 15px; top: 50%; left: 30%; animation-duration: 18s; }
+        .particle:nth-child(3) { width: 25px; height: 25px; top: 70%; left: 60%; animation-duration: 22s; }
+        .particle:nth-child(4) { width: 10px; height: 10px; top: 30%; left: 80%; animation-duration: 16s; }
+
+        @@keyframes float {
+            0%, 100% { transform: translateY(0); opacity: 0.3; }
+            50% { transform: translateY(-50px); opacity: 0.7; }
+        }
+
+        /* Form Card with White Background */
+        .glass-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            color: #000;
+        }
+
+        /* Floating Animation for Card */
+        .float-animation {
+            animation: floatCard 3s ease-in-out infinite;
+        }
+        @@keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Input Fields */
+        .glow-input {
+            background: #f8f9fa;
+            color: #000;
+            border: 1px solid #ced4da;
+            transition: all 0.3s ease;
+        }
+        .glow-input:focus {
+            border-color: #6a0dad;
+            box-shadow: 0 0 10px rgba(106, 13, 173, 0.5);
+            background: #fff;
+        }
+        .glow-input::placeholder {
+            color: #6c757d;
+        }
+
+        /* Violet Button */
+        .login-btn {
+            background: #6a0dad;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .login-btn:hover {
+            background: #5b21b6;
+            transform: scale(1.05);
+        }
+
+        /* Modal Header */
+        .bg-violet {
+            background: #6a0dad;
+        }
+
+        /* Logo Placeholder */
+        .logo-placeholder {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-placeholder img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Footer Styling */
+        .footer-section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+        .footer-section a {
+            color: #a855f7;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Forgot Password Link */
+        .forgot-password {
+            color: #6a0dad;
+            text-decoration: underline;
+        }
+        .forgot-password:hover {
+            color: #5b21b6;
+        }
+
+        /* Welcome Message */
+        .welcome-message {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <section class="banner-one py-5" style="min-height: 100vh; position: relative; overflow: hidden;">
+        <!-- Background Image -->
+        <div class="banner-one__shape-bg-1" style="background-image: url('@Url.Content("~/assets/images/shapes/banner-one-shape-bg-1.png")');"></div>
+
+        <!-- Background Particle Effect -->
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <div class="container my-5">
+            <div class="row justify-content-center align-items-center min-vh-100">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-lg rounded-4 p-4 border-0 glass-card animate__animated animate__fadeInUp float-animation">
+                        <!-- Logo Placeholder -->
+                        <div class="logo-placeholder">
+                            <img src="@Url.Content("~/assets/images/resources/LCRPAY_LOGO-qjZI7a_N.png")" alt="LCRPAY Logo" style="width: 88px">
+                        </div>
+
+                        <!-- Welcome Message -->
+                        <p class="text-center welcome-message mb-4">Welcome back! Sign in to access your LCRPAY account and manage your recharges seamlessly.</p>
+
+                        <h3 class="text-center mb-4 fw-bold">Login or Register To LCRPAY</h3>
+
+                        <div class="mb-3">
+                            <label for="phoneInput" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control form-control-lg glow-input" id="phoneInput" placeholder="Enter your phone number" required />
+                        </div>
+
+                        <div class="d-grid mb-4">
+                            <button class="btn btn-primary btn-lg login-btn" id="loginBtn">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTP Modal -->
+    <div class="modal fade" id="otpModal" tabindex="-1" role="dialog" aria-labelledby="otpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-violet">
+                    <h5 class="modal-title text-white" id="otpModalLabel">Enter OTP</h5>
+                    <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>We have sent an OTP to your phone number. Please enter it below to verify.</p>
+                    <div class="mb-3">
+                        <label for="otpInput" class="form-label">OTP</label>
+                        <input type="text" class="form-control" id="otpInput" placeholder="Enter OTP" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn login-btn" id="verifyOtpBtn">Verify OTP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Feedback Modal -->
+    <div class="modal fade" id="loginFeedbackModal" tabindex="-1" role="dialog" aria-labelledby="loginFeedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-violet">
+                    <h5 class="modal-title text-white" id="loginFeedbackModalLabel">Login Status</h5>
+                    <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="loginFeedbackMessage">
+                    <!-- Message will be set by JavaScript -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Custom Script -->
+    <script>
+        $(document).ready(function () {
+            $('#loginBtn').click(function () {
+                var phone = $('#phoneInput').val().trim();
+
+                // Client-side validation
+                if (phone === '') {
+                    showFeedbackModal('Please enter Phone number:  phone number.', false);
+                    return;
+                }
+
+                // Basic phone number validation (e.g., 10 digits for simplicity)
+                if (!/^\d{10}$/.test(phone)) {
+                    showFeedbackModal('Please enter a valid 10-digit phone number.', false);
+                    return;
+                }
+
+                // Simulate sending OTP (in a real app, this would be an AJAX call to send OTP)
+                $('#otpModal').modal('show');
+            });
+
+            $('#verifyOtpBtn').click(function () {
+                var otp = $('#otpInput').val().trim();
+
+                // Validate OTP
+                if (otp === '') {
+                    showFeedbackModal('Please enter the OTP.', false);
+                    return;
+                }
+
+                // Simulate OTP verification (replace with actual AJAX call)
+                if (otp === '123456') { // Simulated correct OTP
+                    $('#otpModal').modal('hide');
+                    showFeedbackModal('Login successful! Redirecting...', true);
+                    setTimeout(function () {
+                        window.location.href = '/Home/Dashboard'; // Redirect to dashboard
+                    }, 2000);
+                } else {
+                    $('#otpModal').modal('hide');
+                    showFeedbackModal('Invalid OTP. Please try again.', false);
+                }
+
+                // Example AJAX call to verify OTP:
+                /*
+                $.post('/Account/VerifyOtp', {
+                    phone: $('#phoneInput').val().trim(),
+                    otp: otp
+                }, function (response) {
+                    $('#otpModal').modal('hide');
+                    if (response.success) {
+                        showFeedbackModal('Login successful! Redirecting...', true);
+                        setTimeout(function () {
+                            window.location.href = response.redirectUrl;
+                        }, 2000);
+                    } else {
+                        showFeedbackModal('Invalid OTP. Please try again.', false);
+                    }
+                });
+                */
+            });
+        });
+
+        function showFeedbackModal(message, isSuccess) {
+            $('#loginFeedbackMessage').text(message);
+            $('#loginFeedbackModalLabel').text(isSuccess ? 'Login Success' : 'Login Failed');
+            $('#loginFeedbackModal').modal('show');
+        }
+    </script>
+</body>
+</html>
